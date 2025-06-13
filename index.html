@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="./style/main.css">
+	<title>GFG App</title>
+</head>
+
+<body>
+	<div class="loader-div onload">
+		<div class="loader"></div>
+		<p class="paragrath">loading...</p>
+	</div>
+    <div class="bg-img"><img src="./img/img1.jpg" alt="..."></div>
+	<div class="container">
+		<div class="weather-card">
+			<h1 style="color: green;">
+				Weather App
+			</h1>
+			<input type="text" id="city-input"
+				placeholder="Enter city name">
+				<p class="error"></p>
+			<button id="city-input-btn"> 
+					Get Weather
+			</button>
+			<div id="weather-info"
+				class="animateanimated animatefadeIn">
+				<h3 id="city-name"></h3>
+				<p id="temperature"></p>
+				<img src="" id="weather-icon" class="none" alt="">
+				<p id="description"></p>
+				<p id="wind-speed"></p>
+			</div> 
+             <footer><p>created by zurvan</p></footer>
+		</div>
+
+	</div>
+
+
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

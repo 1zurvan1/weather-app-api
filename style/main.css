@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.none {
+    display: none !important;
+}
+.bg-img img {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container {
+    text-align: center;
+}
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 450px;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+}
+
+#city-input {
+    padding: 15px;
+    margin: 15px 0;
+    width: 70%;
+    font-size: 2.5rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#city-input:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+#city-input::placeholder {
+    color: #aaa;
+}
+
+#city-input-btn {
+    padding: 10px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#city-input-btn:hover {
+    background-color: #1565C0;
+}
+
+#weather-info {
+    transition:all 1.5s ease;
+    -webkit-transition:all 1.5s ease;
+    -moz-transition:all 1.5s ease;
+    -ms-transition:all 1.5s ease;
+    -o-transition:all 1.5s ease;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+#temperature {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+#description {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#wind-speed {
+    font-size: 16px;
+    color: rgb(255, 0, 0);
+}
+
+#date {
+    font-size: 14px;
+    color: rgb(255, 0, 0);
+}
+footer p {
+    opacity: .4;
+    font-family: Helvetica, sans-serif;
+}
+
+.loader-div {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    position: absolute;
+}
+.loader {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-top-color: #1565C0;
+  animation: onload 2s ease-in infinite;
+}
+.onload{
+    display: none;
+}
+@keyframes onload {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.error {
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 10px red);
+    color: red;
+}
